@@ -1,0 +1,132 @@
+export const siteData = {
+  name: "Youssef",
+  tagline: "Front-End Developer · Graphic Designer · Social Media Manager",
+  specialities: [
+    "Front-End Developer",
+    "Graphic Designer",
+    "Social Media Manager",
+  ],
+  about: {
+    heading: "About",
+    body: "I'm a multilingual creative based in Morocco, working across three disciplines: front-end development, graphic design, and social media management. I build clean interfaces, design visual identities, and manage content strategies that keep brands active and consistent. I care about making things that feel intentional — not generated, not templated, but thought through.",
+    caption: "Currently based in Morocco",
+    skills: [
+      { name: "HTML / CSS", level: 95 },
+      { name: "JavaScript", level: 88 },
+      { name: "React", level: 85 },
+      { name: "Figma", level: 90 },
+      { name: "Adobe Illustrator", level: 82 },
+      { name: "Photoshop", level: 78 },
+      { name: "Social Media Strategy", level: 88 },
+      { name: "Content Writing", level: 80 },
+    ],
+    tools: ["React", "Vite", "Figma", "Illustrator", "Photoshop", "InDesign", "Premiere Pro", "Mailchimp", "Notion", "Trello"],
+    languages: [
+      { name: "Arabic", level: "Native", percent: 100 },
+      { name: "English", level: "Fluent", percent: 90 },
+      { name: "French", level: "Intermediate", percent: 65 },
+    ],
+    experience: [
+      {
+        role: "Freelance Front-End Developer & Designer",
+        period: "2021 — Present",
+        description: "Building landing pages, product UIs, and brand identities for startups and small businesses across Morocco and Europe.",
+      },
+      {
+        role: "Social Media Manager",
+        period: "2020 — 2022",
+        description: "Managed content calendars, designed post visuals, and grew engagement for local brands in the hospitality and retail sectors.",
+      },
+      {
+        role: "Graphic Design Intern",
+        period: "2019 — 2020",
+        description: "Designed print and digital assets — posters, social templates, pitch decks — at a small creative agency in Casablanca.",
+      },
+    ],
+    education: [
+      {
+        degree: "College Degree in English Studies",
+        school: "Agadir, Morocco",
+        year: "2021",
+      },
+      {
+        degree: "Bachelor in Letters",
+        // school: "Casablanca, Morocco",
+        year: "2016",
+      },
+    ],
+  },
+  services: {
+    heading: "Services",
+    items: [
+      {
+        id: "web-dev",
+        title: "Web Development",
+        short: "Clean, responsive websites and web apps built from scratch.",
+        full: "From single-page landing sites to multi-page product UIs — I build fast, accessible front-ends using React, Vue, or plain HTML/CSS/JS. Every project starts with understanding your goals, then translating them into code that loads quickly, works on every device, and is easy to maintain. No bloated frameworks, no unnecessary complexity — just clean interfaces that do their job.",
+        icon: "Code",
+      },
+      {
+        id: "ui-ux",
+        title: "UI/UX Design",
+        short: "User interfaces that feel intuitive and look considered.",
+        full: "I design interfaces in Figma with a focus on clarity, hierarchy, and flow. Wireframes come first — making sure the structure works before any visual polish goes on. Then I apply typography, spacing, and color to create screens that feel deliberate rather than decorated. Deliverables include high-fidelity mockups, interactive prototypes, and a handoff-ready design system for developers.",
+        icon: "Layout",
+      },
+      {
+        id: "graphic-design",
+        title: "Graphic Design",
+        short: "Visual identity, layouts, and print/digital assets.",
+        full: "Logo systems, business cards, posters, social media templates, presentation decks — anything that needs to look intentional on screen or on paper. I work in Illustrator and InDesign for print, Figma and Photoshop for digital. Every design is rooted in a clear grid, consistent type system, and a restrained color palette so the final result feels cohesive, not thrown together.",
+        icon: "PenTool",
+      },
+      {
+        id: "social-media",
+        title: "Social Media Management",
+        short: "Content strategy and posting that keeps accounts active.",
+        full: "I plan content calendars, write captions, design post visuals, and schedule uploads across Instagram, LinkedIn, TikTok, and X. The goal is consistency — showing up regularly with content that matches your brand voice. I also track basic metrics (reach, engagement rate, follower growth) and adjust the strategy monthly based on what's actually working.",
+        icon: "Share2",
+      },
+      {
+        id: "brand-identity",
+        title: "Brand Identity",
+        short: "Logo, palette, type system — the full visual foundation.",
+        full: "A brand identity is more than a logo. I develop a complete visual system: logo variations, primary and secondary color palettes, typography choices, spacing rules, and usage guidelines. Everything is delivered in a brand kit with files organized for both print and digital use. The result is a set of assets you can hand to any designer or printer and get consistent output every time.",
+        icon: "Layers",
+      },
+      {
+        id: "seo",
+        title: "SEO Optimization",
+        short: "Technical and on-page improvements that help you rank.",
+        full: "I audit your site's structure, page speed, meta tags, heading hierarchy, and internal linking. Then I implement the fixes — clean semantic HTML, optimized images, proper Open Graph tags, and sitemap setup. SEO isn't magic; it's mostly about building a well-structured site that search engines can crawl and users can navigate. That's what I deliver.",
+        icon: "Search",
+      },
+      {
+        id: "email",
+        title: "Email Marketing",
+        short: "Newsletter design, setup, and campaign management.",
+        full: "From template design to list management to scheduling sends — I handle the full email workflow. I build responsive HTML email templates that look good in Gmail, Outlook, and Apple Mail. Then I set up automations, segment your audience, and write copy that gets opened. Platforms I work with include Mailchimp, Resend, and Loops.",
+        icon: "Mail",
+      },
+      {
+        id: "content-writing",
+        title: "Content Writing",
+        short: "Copy for websites, blogs, and social that sounds human.",
+        full: "I write website copy, blog posts, product descriptions, and social captions in English, French, or Arabic. The style is always plain and direct — no filler words, no corporate jargon, no SEO-stuffed paragraphs that read like they were written for robots. Every piece is tailored to your audience and edited until it sounds like something a person would actually say.",
+        icon: "FileText",
+      },
+    ],
+  },
+  contact: {
+    heading: "Contact",
+    body: "Get in touch at",
+    email: "hello@youssef.dev",
+  },
+  social: {
+    github: "https://github.com/",
+    linkedin: "https://linkedin.com/in/",
+    instagram: "https://instagram.com/",
+    behance: "https://behance.net/",
+    twitter: "https://twitter.com/",
+  },
+};
