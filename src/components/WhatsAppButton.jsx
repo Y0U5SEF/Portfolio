@@ -1,7 +1,7 @@
 import { siWhatsapp } from "simple-icons";
 
-const PHONE = "212600000000";
-const MESSAGE = "Hi Youssef! I found your portfolio and would like to get in touch.";
+const PHONE = "447828725827";
+const MESSAGE = "Hi Youssef! 👋 I found your portfolio and would like to get in touch.";
 
 export default function WhatsAppButton() {
   const url = `https://wa.me/${PHONE}?text=${encodeURIComponent(MESSAGE)}`;
