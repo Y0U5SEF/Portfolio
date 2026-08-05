@@ -1,5 +1,5 @@
 export const siteData = {
-  name: "Youssef",
+  name: "Youssef El Abassi",
   tagline: "Front-End Developer · Graphic Designer · Social Media Manager",
   specialities: [
     "Front-End Developer",
@@ -120,7 +120,32 @@ export const siteData = {
   contact: {
     heading: "Contact",
     body: "Get in touch at",
-    email: "hello@youssef.dev",
+    email: "yusufelabassi@gmail.com",
+  },
+  testimonials: {
+    heading: "Testimonials",
+    items: [
+      {
+        quote: "Youssef rebuilt our landing page in half the time we expected and it looks far better than the original. He listens carefully, asks the right questions, and delivers exactly what was discussed — no surprises, no excuses.",
+        name: "Amina Benali",
+        role: "Founder, Bloom Bakery",
+      },
+      {
+        quote: "Working with Youssef on our brand identity was effortless. He took the time to understand our vibe and translated it into a visual system that feels cohesive and genuinely us. Every asset he delivered was on-brand and ready to use.",
+        name: "Karim Tazi",
+        role: "Co-Founder, Atlas Coffee Co.",
+      },
+      {
+        quote: "Our Instagram engagement tripled within two months of Youssef taking over content strategy. He designs every post to match our brand and writes captions that actually sound like a human wrote them. Highly recommend.",
+        name: "Sara Ouazzani",
+        role: "Marketing Manager, Riviera Hotels",
+      },
+      {
+        quote: "Youssef handled our email campaigns from design to deployment. Open rates went up, unsubscribe rates dropped, and the whole process felt organized from day one. He's reliable and genuinely cares about results.",
+        name: "Younes Fassi",
+        role: "Director, TechStart Morocco",
+      },
+    ],
   },
   social: {
     github: "https://github.com/",

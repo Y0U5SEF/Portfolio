@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 
 const TYPING = "typing";
 const HOLDING = "holding";
@@ -12,41 +12,55 @@ export default function useTypewriterCycle(words, {
   pauseDuration = 400,
 } = {}) {
   const [displayedText, setDisplayedText] = useState("");
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [phase, setPhase] = useState(TYPING);
-  const timeoutRef = useRef(null);
+  const indexRef = useRef(0);
+  const phaseRef = useRef(TYPING);
+  const charRef = useRef(0);
+  const timerRef = useRef(null);
 
-  const currentWord = words[currentIndex];
+  const clearTimer = () => {
+    if (timerRef.current) clearTimeout(timerRef.current);
+  };
 
   const tick = useCallback(() => {
+    clearTimer();
+    const word = words[indexRef.current];
+    const phase = phaseRef.current;
+
     if (phase === TYPING) {
-      setDisplayedText(currentWord.slice(0, displayedText.length + 1));
-      if (displayedText.length + 1 === currentWord.length) {
-        setPhase(HOLDING);
-        timeoutRef.current = setTimeout(() => setPhase(DELETING), holdDuration);
+      charRef.current++;
+      setDisplayedText(word.slice(0, charRef.current));
+
+      if (charRef.current === word.length) {
+        phaseRef.current = HOLDING;
+        timerRef.current = setTimeout(() => {
+          phaseRef.current = DELETING;
+          tick();
+        }, holdDuration);
         return;
       }
-      timeoutRef.current = setTimeout(tick, typeSpeed);
+      timerRef.current = setTimeout(tick, typeSpeed);
     } else if (phase === DELETING) {
-      setDisplayedText(currentWord.slice(0, displayedText.length - 1));
-      if (displayedText.length - 1 === 0) {
-        setPhase(PAUSING);
-        timeoutRef.current = setTimeout(() => {
-          setCurrentIndex((prev) => (prev + 1) % words.length);
-          setPhase(TYPING);
+      charRef.current--;
+      setDisplayedText(word.slice(0, charRef.current));
+
+      if (charRef.current === 0) {
+        phaseRef.current = PAUSING;
+        timerRef.current = setTimeout(() => {
+          indexRef.current = (indexRef.current + 1) % words.length;
+          phaseRef.current = TYPING;
+          tick();
         }, pauseDuration);
         return;
       }
-      timeoutRef.current = setTimeout(tick, deleteSpeed);
+      timerRef.current = setTimeout(tick, deleteSpeed);
     }
-  }, [displayedText, currentWord, phase, currentIndex, words.length, typeSpeed, holdDuration, deleteSpeed, pauseDuration]);
+  }, [words, typeSpeed, holdDuration, deleteSpeed, pauseDuration]);
 
   useEffect(() => {
-    if (phase === TYPING || phase === DELETING) {
-      timeoutRef.current = setTimeout(tick, phase === TYPING ? typeSpeed : deleteSpeed);
-    }
-    return () => clearTimeout(timeoutRef.current);
-  }, [tick, phase, typeSpeed, deleteSpeed]);
+    clearTimer();
+    timerRef.current = setTimeout(tick, typeSpeed);
+    return clearTimer;
+  }, [tick, typeSpeed]);
 
   return displayedText;
 }

@@ -1,27 +1,27 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
-  Code,
-  Layout,
-  PenTool,
-  Share2,
-  Layers,
-  Search,
-  Mail,
-  FileText,
-  ArrowLeft,
-} from "lucide-react";
+  CodeIcon,
+  LayoutIcon,
+  PenToolIcon,
+  Share2Icon,
+  LayersIcon,
+  SearchIcon,
+  MailIcon,
+  FileTextIcon,
+  ArrowLeftIcon,
+} from "../icons";
 import { siteData } from "../../data/content";
 
 const iconMap = {
-  Code,
-  Layout,
-  PenTool,
-  Share2,
-  Layers,
-  Search,
-  Mail,
-  FileText,
+  Code: CodeIcon,
+  Layout: LayoutIcon,
+  PenTool: PenToolIcon,
+  Share2: Share2Icon,
+  Layers: LayersIcon,
+  Search: SearchIcon,
+  Mail: MailIcon,
+  FileText: FileTextIcon,
 };
 
 const container = {
@@ -91,7 +91,7 @@ function DetailView({ item, onBack }) {
         onClick={onBack}
         variants={fadeUp}
       >
-        <ArrowLeft size={16} strokeWidth={1.5} />
+        <ArrowLeftIcon size={16} />
         All services
       </motion.button>
 

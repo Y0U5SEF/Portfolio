@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import Avatar from "./Avatar";
+import Logo from "./Logo";
 import NavMenu from "./NavMenu";
 import SocialLinks from "./SocialLinks";
 import Copyright from "./Copyright";
@@ -32,8 +32,8 @@ export default function Sidebar({ activePage, onNavigate }) {
       <ThemeToggle />
 
       <motion.div className="sidebar__top" variants={fadeUp}>
-        <Avatar name={siteData.name} />
-        <span className="sidebar__name">{siteData.name}</span>
+        <Logo size={96} />
+        <span className="sidebar__name">Ussefy</span>
       </motion.div>
 
       <NavMenu activePage={activePage} onNavigate={onNavigate} />

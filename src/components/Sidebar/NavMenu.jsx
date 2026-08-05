@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-const navItems = ["Home", "About", "Services", "Contact"];
+const navItems = ["Home", "About", "Services", "Testimonials", "Contact"];
 
 const itemVariants = {
   hidden: { opacity: 0, x: -12 },
